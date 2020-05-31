@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alerter</title>
+</head>
+<body>
+    <center>
+        <h1>Check your health status</h1>
+
+        <div>
+            <form method="POST" id="form" action="{{url_for('predict')}}">
+                <label for="oxy saturation">oxygen saturation:</label>    <input type="number" name="oxygen saturation level"placeholder="80.0">
+                <br>
+                <br>
+                <label for="pulse rate">pulse rate:</label>    <input type="number" name="oxygen saturation level"placeholder="80.0">
+                <br>
+                <br>
+                <label for="respiratory rate">respiratory rate:</label>    <input type="number" name="oxygen saturation level"placeholder="80.0">
+                <br><br>
+                <button type="submit" value="submit" >submit</button>
+            </form>
+        </div>
+        {{prediction_text}}
+    </center>
+    
+
+</body>
+</html>
